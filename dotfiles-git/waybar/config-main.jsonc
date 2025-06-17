@@ -1,0 +1,99 @@
+// -*- mode: jsonc -*-
+{
+    // "output": "DP-3", // Insert your main display here! (or dont, i dont care)
+    // "layer": "top", // Waybar at top layer
+    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 45, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    "margin": 8,
+    "spacing": 4, // Gaps between modules (4px)
+    // Choose the order of the modules
+    "modules-left": [
+        "custom/distrologo",
+        "tray",
+        "custom/search"
+    ],
+    "modules-center": [
+        "hyprland/window"
+    ],
+    "modules-right": [
+        "pulseaudio",
+        "custom/separator",
+        "clock"
+    ],
+    "tray": {
+        "icon-size": 24,
+        "spacing": 10
+    },
+    "custom/search": {
+        "format": " ",
+        "on-click": "rofi -show filebrowser -theme $HOME/.config/rofi/launchers/type-1/style-5.rasi"
+    },
+    "clock": {
+        // "timezone": "America/New_York",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "{:%I:%M %p}",
+        "format-alt": "{:%m-%d-%Y}"
+    },
+    "custom/separator": {
+        "format": "|"
+    },
+    "cpu": {
+        "format": ": {usage}%",
+        "tooltip": false
+    },
+    "memory": {
+        "format": ": {}%"
+    },
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "   ",
+        "format-ethernet": "{ipaddr}/{cidr}  ",
+        "tooltip-format": "{ifname} via {gwaddr}  ",
+        "format-linked": "{ifname} (No IP)  ",
+        "format-disconnected": "󰤭 ",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "format-icons": ["󰤨", "󰤥", "󰤢", "󰤟", "󰤯"]
+    },
+    "pulseaudio": {
+        "scroll-step": 1, // %, can be a float
+        "format": "{volume}% 󰋋",
+        "format-bluetooth": "{volume}% 󰥰",
+        "format-bluetooth-muted": "󰟎󰂯",
+        "format-muted": "󰟎",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "custom/power": {
+        "format" : "⏻",
+		"tooltip": false,
+		"on-click": "wlogout"
+    },
+    "custom/wifi": {
+        "format" : "",
+		"tooltip": false,
+		"on-click": "nm-connection-editor"
+    },
+    "custom/bluetooth": {
+        "format" : "",
+		"tooltip": false,
+		"on-click": "blueberry"
+    },
+    "custom/distrologo": {
+      "format": "{icon}",
+      "format-icons": {
+        "default": "\udb82\udcc7",
+      },
+		  "on-click": "rofi -show drun -theme $HOME/.config/rofi/launchers/type-2/style-13.rasi"
+    }
+}

@@ -1,0 +1,63 @@
+/* Universal Config */
+    * {
+        font-family: "3270 Nerd Font";
+        font-size: 20px;
+        padding: 2px 2px;
+        transition-duration: 1s;
+        transition-property: all;
+    }
+
+/* Status bar base */
+    window#waybar {
+        background-color: rgba(0, 0, 0, 0.5);
+        border: 3px solid #1793d1;
+        border-radius: 15px;
+    }
+
+/* Rofi */
+    /* Idle */
+        #custom-distrologo {
+            padding-left: 12px; 
+            padding-right: 15px;
+            border-radius: 12px;
+        }
+
+    /* Hover */
+        #custom-distrologo:hover {
+            background-color: rgba(23, 147, 209, 0.2);
+        }
+
+
+
+/* Clock and Audio */
+    /* Idle */
+        #clock,
+        #pulseaudio {
+            padding-left: 12px;
+            padding-right: 18px;
+            border-radius: 12px;
+        }
+
+    /* Hover */
+        #clock:hover,
+        #pulseaudio:hover {
+            background-color: rgba(23, 147, 209, 0.2);
+        }
+
+/* Network */
+    /* Idle */
+        #network {
+            padding-left: 13px;
+            padding-right: 6px;
+            border-radius: 12px;
+        }
+
+    /* Hover */
+        #network:hover {
+            background-color: rgba(23, 147, 209, 0.2);
+        }
+
+/* Other */
+    #custom-separator {
+        color: rgba(255, 255, 255, 0.2);
+    }
