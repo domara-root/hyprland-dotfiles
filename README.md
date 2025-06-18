@@ -33,14 +33,14 @@ Scroll up, click the green `<> Code ▼` button, then click `Download ZIP`, whic
 ### CLI-based download
 For this, you need `git`, which the command to install is:
 ```bash
-sudo pacman -S git
+$ sudo pacman -S git
 ```
 This command assumes you use `sudo` as your privilege escalation tool.
 
 Then after that is installed, you need to clone the repository into a directory.
 I personally have my own `git` folder inside my `/home` directory for things like that to keep it clean, but you can do whatever you like.
 ```bash
-git clone https://www.github.com/domara-root/hyprland-dotfiles
+$ git clone https://www.github.com/domara-root/hyprland-dotfiles
 ```
 
 ### Step 2: Move the config files to your config folder
