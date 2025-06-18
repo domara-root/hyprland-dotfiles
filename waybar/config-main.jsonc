@@ -27,7 +27,7 @@
     },
     "custom/search": {
         "format": " ",
-        "on-click": "rofi -show filebrowser -theme $HOME/.config/rofi/launchers/type-1/style-5.rasi"
+        "on-click": "rofi -show filebrowser -theme $HOME/.config/rofi/search/main.rasi"
     },
     "clock": {
         // "timezone": "America/New_York",
@@ -94,6 +94,6 @@
       "format-icons": {
         "default": "\udb82\udcc7",
       },
-		  "on-click": "rofi -show drun -theme $HOME/.config/rofi/launchers/type-2/style-13.rasi"
+		  "on-click": "rofi -show drun -theme $HOME/.config/rofi/apps/main.rasi"
     }
 }
