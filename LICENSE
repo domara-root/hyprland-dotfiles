@@ -12,7 +12,10 @@ in the Software without restriction, including without limitation the rights
 to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, subject to the following condition:
 
-You may NOT sell the Software or any derivative works for commercial profit.
+You may NOT sell the Software or any derivative works for commercial profit,  
+unless it is bundled with physical hardware or included as part of a larger product  
+where no additional cost is charged specifically for this software.
+
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
