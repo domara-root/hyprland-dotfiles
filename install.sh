@@ -3,7 +3,7 @@
 read -p "Are you sure you want to run this? [y/N] " confirm
 if [[ "$confirm" == "y" || "$confirm" == "Y" ]]; then
     if ! command -v pacman &>/dev/null; then
-        # laugh at non arch users for trying to install this even tho i told them in the readme you cant do it unless u cool
+        # laugh at non arch users for trying to install this even tho i told them in the readme you cant do it unless u have arch
             echo "bruhhh this dood tried to install this with no arch"
             echo "failure to read! laugh at this user."
             echo "manual install instructions:"
@@ -30,16 +30,15 @@ if [[ "$confirm" == "y" || "$confirm" == "Y" ]]; then
     sudo chsh -s /usr/bin/fish $USER # change the damn shell already
 
     # copy tiem
-        cp -vr "$(pwd)/hypr" "$HOME/.config/hypr" 
-        cp -vr "$(pwd)/rofi" "$HOME/.config/rofi"
-        cp -vr "$(pwd)/kitty" "$HOME/.config/kitty"
-        cp -vr "$(pwd)/waybar" "$HOME/.config/waybar"
-        cp -vr "$(pwd)/fastfetch" "$HOME/.config/fastfetch"
+        cp -vr "$(pwd)/hypr" "$HOME/.config" 
+        cp -vr "$(pwd)/rofi" "$HOME/.config"
+        cp -vr "$(pwd)/kitty" "$HOME/.config"
+        cp -vr "$(pwd)/waybar" "$HOME/.config"
+        cp -vr "$(pwd)/fastfetch" "$HOME/.config"
 
-    echo -e "\e[31mrestarting hyprland\e[0m" # restart hyprland
-    sleep 3 # waiting tiem
-    hyprctl dispatch exit # kil hyprlan
-    hyprland # nvm he back 🤣🤣🤣🥀
+    echo -e "\e[31mrestarting hyprpaper and waybar (if not started)\e[0m" # restart stuff
+    pkill waybar; pkill hyprpaper; # send them to heaven
+    waybar 
 
     touch instructions.txt # make an instructions file
 
