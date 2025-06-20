@@ -4,15 +4,14 @@
  * Github : @adi1090x
  * 
  * Colors
- *
- * Available Colors Schemes
- *
- * adapta    catppuccin    everforest    navy       paper
- * arc       cyberpunk     gruvbox       nord       solarized
- * black     dracula       lovelace      onedark    yousai
- *
  **/
 
-/* Import color-scheme from `colors` directory */
-
-@import "~/.config/rofi/colors/onedark.rasi"
+* {
+    text:           #1E2127FF;
+    background:     #1E2127AA;
+    background-alt: #282B31AA;
+    foreground:     #FFFFFFAA;
+    selected:       #61AFEFFF;
+    active:         #98C379FF;
+    urgent:         #E06C75FF;
+}
