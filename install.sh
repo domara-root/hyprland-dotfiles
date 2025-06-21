@@ -10,21 +10,29 @@ if [[ "$confirm" == "y" || "$confirm" == "Y" ]]; then
             echo "  fish, hyprland, waybar, rofi, kitty, fastfetch"
             exit 1
     else
-        sudo pacman -S fish hyprland waybar rofi kitty fastfetch --noconfirm # install everything except a j*b application and the h*zz (we only pull bruzz)🥀🥀🥀
+        sudo pacman -S fish hyprland waybar rofi kitty fastfetch --noconfirm --needed # install everything except a j*b application and the h*zz (we only pull bruzz)🥀🥀🥀
     fi
 
+    if ! command -v yay &>/dev/null; then
+        echo "yay not found. installing..."
+    
+        # make sure required tools are there
+        sudo pacman -S --needed --noconfirm base-devel git
+    
+        # clone and build yay
+        git clone https://aur.archlinux.org/yay.git /tmp/yay
+        cd /tmp/yay || exit 1
+        makepkg -si --noconfirm
+    
+        cd ..
+    fi
+
+    yay -S hyprpaper hyprshot ttf-3270-nerd
 
     mkdir $HOME/.dotfiles
     cp wallpaper.png $HOME/.dotfiles
 
     cp logo.png $HOME/.config/fastfetch
-
-    tmpdir=$(mktemp -d) # make a temp dir
-    curl -L https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/3270.zip -o "$tmpdir/3270.zip" # download da font
-    unzip "$tmpdir/3270.zip" -d "$tmpdir" # put da shii in uhh i forgor 🥀 (temp folder)
-    sudo cp -vr "$tmpdir/3270/" /usr/share/fonts/ # copy ts into fonts folder🥀🥀
-    sudo fc-cache -fv # reload da font
-    rm -rf "$tmpdir" # die temp dir
 
     echo -e "\e[31mCHANGING SHELL!!!\e[0m" # red text :3?
     sudo chsh -s /usr/bin/fish $USER # change the damn shell already
