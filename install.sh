@@ -10,7 +10,7 @@ if [[ "$confirm" == "y" || "$confirm" == "Y" ]]; then
             echo "  fish, hyprland, waybar, rofi, kitty, fastfetch"
             exit 1
     else
-        sudo pacman -S fish hyprland waybar rofi kitty fastfetch --noconfirm --needed # install everything except a j*b application and the h*zz (we only pull bruzz)🥀🥀🥀
+        sudo pacman -S fish hyprland waybar rofi kitty fastfetch dolphin --noconfirm --needed # install everything except a j*b application and the h*zz (we only pull bruzz)🥀🥀🥀
     fi
 
     if ! command -v yay &>/dev/null; then
