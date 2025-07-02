@@ -33,33 +33,33 @@ Scroll up, click the green `<> Code ▼` button, then click `Download ZIP`, whic
 ### CLI-based download
 For this, you need `git`, which the command to install is:
 ```bash
-$ sudo pacman -S git
+sudo pacman -S git
 ```
 This command assumes you use `sudo` as your privilege escalation tool.
 
 Then after that is installed, you need to clone the repository into a directory.
 I personally have my own `git` folder inside my `/home` directory for things like that to keep it clean, but you can do whatever you like.
 ```bash
-$ git clone https://www.github.com/domara-root/hyprland-dotfiles
+git clone https://www.github.com/domara-root/hyprland-dotfiles
 ```
 
 ### Step 2: Move the config files to your config folder
 Pretty sure you may know how to do this, but if you don't, here's how:
 ```bash
-$ cp -r hypr "$HOME/.config"
-$ cp -r rofi "$HOME/.config"
-$ cp -r kitty "$HOME/.config"
-$ cp -r waybar "$HOME/.config"
-$ cp -r fastfetch "$HOME/.config"
+cp -r hypr "$HOME/.config"
+cp -r rofi "$HOME/.config"
+cp -r kitty "$HOME/.config"
+cp -r waybar "$HOME/.config"
+cp -r fastfetch "$HOME/.config"
 ```
 Then copy the logo.png to fastfetch config, which is optional but extremely recommended
 ```bash
-$ cp logo.png $HOME/.config/fastfetch/logo.png
+cp logo.png $HOME/.config/fastfetch/logo.png
 ```
 Then copy the wallpaper to the working directory (which can be changed), once again optional.
 ```bash
-$ mkdir $HOME/.dotfiles
-$ cp wallpaper.png $HOME/.dotfiles/wallpaper.png
+mkdir $HOME/.dotfiles
+cp wallpaper.png $HOME/.dotfiles/wallpaper.png
 ```
 
 # THIS SECTION IS FOR ARCH-BASED SYSTEMS ONLY!! THIS IS THE AUTOMATIC INSTALLER.
@@ -69,13 +69,13 @@ If you DO have an Arch-based OS and you want to help test it, you are more than 
 ### Step 1: Make the install.sh file executable
 To actually run the installer, you need to mod it so it can actually run.
 ```bash
-$ chmod +x install.sh
+chmod +x install.sh
 ```
 
 ### Step 2: Run the install script
 After chmodding the file, you need to run it.
 ```bash
-$ ./install.sh
+./install.sh
 ```
 It will then prompt you if you want to install this in case you are unsure and would like to change your mind. To continue, type `Y` (or `y`) and press enter.
 
