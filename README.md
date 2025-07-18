@@ -63,7 +63,7 @@ cp wallpaper.png $HOME/.dotfiles/wallpaper.png
 ```
 
 # THIS SECTION IS FOR ARCH-BASED SYSTEMS ONLY!! THIS IS THE AUTOMATIC INSTALLER.
-**WARNING ⚠️:** Right now, the only stable usage of this script is on Arch-based or Fedora-based OSes, like Manjaro, EndeavourOS, Nobara, etc. If you do not have an Arch-based or Fedora-based OS, **PLEASE DO NOT USE THIS!!**
+**WARNING ⚠️:** Right now, the only stable usage of this script is on Arch-based OSes, like Manjaro, EndeavourOS, etc. If you do not have an Arch-based OS **PLEASE DO NOT USE THIS!!**
 If you DO have an Arch-based OS and you want to help test it, you are more than welcome to use this script and give feedback! 🙂
 ## How to install:
 ### Step 1: Make the install.sh file executable
