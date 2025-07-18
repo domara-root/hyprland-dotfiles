@@ -8,7 +8,7 @@ if [[ "$confirm" == "y" || "$confirm" == "Y" ]]; then
     elif command -v dnf &>/dev/null; then
         sudo dnf update -y
         # dependencies for hyprpaper/hyprshot building/installing
-        sudo dnf install cargo rust wayland-devel wayland-protocols-devel hyprlang-devel pango-devel cairo-devel file-devel libglvnd-devel libglvnd-core-devel libjpeg-turbo-devel libwebp-devel libjxl-devel gcc-c++ hyprutils-devel hyprwayland-scanner libnotify wl-clipboard slurp grim jq -y 
+        sudo dnf install cargo cmake rust wayland-devel wayland-protocols-devel hyprlang-devel pango-devel cairo-devel file-devel libglvnd-devel libglvnd-core-devel libjpeg-turbo-devel libwebp-devel libjxl-devel gcc-c++ hyprutils-devel hyprwayland-scanner libnotify wl-clipboard slurp grim jq -y 
         
         # the big stuff
         sudo dnf install kitty rofi waybar fastfetch dolphin hyprland ttf-3270-nerd git -y
